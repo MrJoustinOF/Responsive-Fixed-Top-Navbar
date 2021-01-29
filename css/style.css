@@ -1,0 +1,94 @@
+:root {
+    --principalFont: 'Source Sans Pro', sans-serif;
+    --black: #000000;
+    --gray: #393938;
+    --white: #ffffff; 
+}
+
+/* Nav Style */
+
+nav {
+    background: var(--gray);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed; 
+    left: 0;
+    top: 0;
+    right: 0;
+    /* Remember that the nav is positioned above the text, so apply padding-top ; to what is below to show it.*/
+}
+
+nav h1 {
+    font-weight: 600;
+    text-align: left;
+    color: var(--white);
+    font-family: var(--principalFont);
+    padding-left: 20px ;
+}
+
+nav a {
+    text-decoration: none;
+    font-family: var(--principalFont);
+    font-size: 20px;
+    color: var(--white);
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.itemsMenu {
+    display: flex;
+    list-style: none;
+    margin-right: 30px;
+}
+
+.itemsMenu li {
+    margin: 0 5px;
+}
+.itemsMenu li a {
+    display: block;
+    text-transform: uppercase;
+}
+
+.btn_menu {
+    margin-right: 30px;
+    font-size: 25px;
+    cursor: pointer;
+    display: none;
+}
+
+.btn_menu img{
+    width: 40px;
+    height: 40px;
+}
+
+ul.show {
+    top: 65px;
+}
+
+@media screen and (max-width: 768px) {
+    .btn_menu {
+        display: inline-flex;
+    }
+    .itemsMenu {
+        position: fixed;
+        width: 100vw;
+        height: calc(100% - 65px);
+        background: var(--gray);
+        top: -100vh;
+        text-align: center;
+        transition: all -4s;
+        flex-direction: column;
+        margin-top: 0px;
+        background: #E8EAEA;
+        
+    }
+
+    .itemsMenu a {
+        color: var(--black);
+        font-weight: bold;
+        line-height: 50px;
+        margin-right: 75px;
+        margin-top: 25px;
+    }
+}
