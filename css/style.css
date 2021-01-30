@@ -45,6 +45,12 @@ nav a {
 .itemsMenu li {
     margin: 0 5px;
 }
+
+.itemsMenu a:hover {
+    background: white;
+    color: var(--gris);
+}
+
 .itemsMenu li a {
     display: block;
     text-transform: uppercase;
